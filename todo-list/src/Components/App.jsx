@@ -1,6 +1,7 @@
 import "./App.css";
 import { useState } from "react";
 import Input from "./Input";
+import List from "./List";
 
 function App() {
   const [todo, setTodo] = useState("");
@@ -17,11 +18,7 @@ function App() {
     <div className="App">
       <img className="logo" src="/tech-logo.png" alt="" />
       <Input setTodo={setTodo} todo={todo} addTodo={addTodo} />
-      <ul>
-        {todos.map((todo, i) => (
-          <li key={i}>{todo}</li>
-        ))}
-      </ul>
+      <List todos={todos} />
     </div>
   );
 }
