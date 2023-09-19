@@ -1,4 +1,5 @@
 import React from "react";
+import "./Input.css";
 
 const Input = ({ setTodo, todo, addTodo }) => {
   return (
@@ -11,7 +12,7 @@ const Input = ({ setTodo, todo, addTodo }) => {
         onChange={(event) => setTodo(event.target.value)}
         value={todo}
       />
-      <button className="app-button" onClick={addTodo}>
+      <button className="add-button" onClick={addTodo}>
         Add
       </button>
     </div>
