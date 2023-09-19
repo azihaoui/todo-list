@@ -1,5 +1,6 @@
 import React from "react";
 import Item from "./Item";
+import "./List.css";
 
 const List = ({ todos, complete }) => {
   if (todos.length === 0) {
