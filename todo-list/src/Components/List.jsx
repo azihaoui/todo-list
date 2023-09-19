@@ -1,17 +1,16 @@
 import React from "react";
+import Item from "./Item";
 
-const List = ({ todos }) => {
+const List = ({ todos, complete }) => {
   if (todos.length === 0) {
     return <div className="empty">All tasks completed!</div>;
   }
 
   return (
     <div className="todo-list">
-      <ul>
-        {todos.map((todo, i) => (
-          <li key={i}>{todo}</li>
-        ))}
-      </ul>
+      {todos.map((todo, i) => (
+        <Item text={todo} key={i} complete={complete} />
+      ))}
     </div>
   );
 };

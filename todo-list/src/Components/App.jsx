@@ -14,11 +14,16 @@ function App() {
     }
   };
 
+  const complete = (text) => {
+    const uncompletedTodos = todos.filter((todo) => todo !== text);
+    setTodos(uncompletedTodos);
+  };
+
   return (
     <div className="App">
       <img className="logo" src="/tech-logo.png" alt="" />
       <Input setTodo={setTodo} todo={todo} addTodo={addTodo} />
-      <List todos={todos} />
+      <List todos={todos} complete={complete} />
     </div>
   );
 }
